@@ -18,29 +18,34 @@ function cardOpen(x){
 	
 	openCardList.push(x.childNodes[1]);
 	if(openCardList.length == 2){
-//		setTimeout(check,3000, openCardList);
 		check(openCardList);
 		openCardList = [];
 	}
 
 }
 
-
-
-
 function check(list){
 	if(list[0].classList[1] === list[1].classList[1]){
 		console.log('true');
 	} else{
 		console.log('false');
-		setTimeout(noMatch, 2000, list);
+		list.forEach(function(item){
+//			item.parentNode.classList.remove('no-match');
+//			console.log(item.parentNode.classList.contains('no-match'));
+			item.parentNode.classList.add('no-match');
+			console.log(item.parentNode.classList.contains('no-match'));
+		});
+
+		setTimeout(noMatch, 500, list);
 	}
 }
 
 function noMatch(list){
 	list.forEach(function(item){
+		item.parentNode.classList.remove('no-match')
 		item.classList.remove('fas-open');
 		item.parentNode.classList.remove('card-open');
+//		item.parentNode.classList.add('no-match');
 	});
 }
 
