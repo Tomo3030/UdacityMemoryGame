@@ -33,13 +33,19 @@ function check(list){
 		console.log('true');
 	} else{
 		console.log('false');
-		list.forEach(noMatch);
+//		list.forEach(noMatch);
+		setTimeout(notMatch, 2000, list);
 	}
 }
 
+function notMatch(list){
+	list.forEach(noMatch);
+}
 
 function noMatch(item){
 	console.log(item);
 	item.classList.remove('fas-open');
 	item.parentNode.classList.remove('card-open');
 }
+
+
