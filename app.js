@@ -27,6 +27,10 @@ function cardOpen(x){
 function check(list){
 	if(list[0].classList[1] === list[1].classList[1]){
 		console.log('true');
+		list.forEach(function(item){
+			item.parentNode.classList.add('match');
+		});
+		
 	} else{
 		console.log('false');
 		list.forEach(function(item){
@@ -36,7 +40,7 @@ function check(list){
 			console.log(item.parentNode.classList.contains('no-match'));
 		});
 
-		setTimeout(noMatch, 500, list);
+		setTimeout(noMatch, 600, list);
 	}
 }
 
