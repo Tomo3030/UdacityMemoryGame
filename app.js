@@ -1,45 +1,44 @@
 
+/******************************************************************************
+*
+* Main Game Logic 
+*
+*******************************************************************************/
 
+// Sets event listener to turn over cards
 
 document.getElementById("game-area").addEventListener('click', function(event){
-	let x = event.target;
-	if(x.classList.contains("grid-item") === true){
-		cardOpen(x)
+	let card = event.target;
+	if(card.classList.contains("grid-item") === true){
+		cardOpen(card)
 	} 
 });
 
+// this is a list to put open cards in 
 let openCardList = [];
 
-function cardOpen(x){
-	x.classList.add('card-open');
-	x.childNodes[1].classList.add('fas-open');
-	
-	console.log(x.childNodes[1]);
-	
-	openCardList.push(x.childNodes[1]);
+// Function to make card to diplay open side and initiate function check whether cards are the same
+function cardOpen(card){
+	card.classList.add('card-open');
+	card.childNodes[1].classList.add('fas-open');	
+	openCardList.push(card.childNodes[1]);
 	if(openCardList.length == 2){
 		check(openCardList);
 		openCardList = [];
 	}
-
 }
 
+// fucntion to check whether cards are the same.
 function check(list){
 	if(list[0].classList[1] === list[1].classList[1]){
-		console.log('true');
 		list.forEach(function(item){
 			item.parentNode.classList.add('match');
 		});
 		
 	} else{
-		console.log('false');
 		list.forEach(function(item){
-//			item.parentNode.classList.remove('no-match');
-//			console.log(item.parentNode.classList.contains('no-match'));
 			item.parentNode.classList.add('no-match');
-			console.log(item.parentNode.classList.contains('no-match'));
 		});
-
 		setTimeout(noMatch, 600, list);
 	}
 }
@@ -49,7 +48,6 @@ function noMatch(list){
 		item.parentNode.classList.remove('no-match')
 		item.classList.remove('fas-open');
 		item.parentNode.classList.remove('card-open');
-//		item.parentNode.classList.add('no-match');
 	});
 }
 
