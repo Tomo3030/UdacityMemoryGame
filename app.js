@@ -7,6 +7,7 @@
 
 let score = 0;
 let moves = 0;
+const movesDisplay = document.getElementById('moves');
 
 // Sets event listener to turn over cards
 document.getElementById("game-area").addEventListener('click', function(event){
@@ -32,6 +33,9 @@ function cardOpen(card){
 
 // fucntion to check whether cards are the same.
 function check(list){
+	moves += 1;
+	movesDisplay.innerHTML = moves;
+	console.log(moves); 
 	if(list[0].classList[1] === list[1].classList[1]){
 		list.forEach(function(item){
 			item.parentNode.classList.add('match');
@@ -41,7 +45,6 @@ function check(list){
 		if(score === 8){
 			setTimeout(win, 700);
 		}
-		console.log(score);
 		
 	} else{
 		list.forEach(function(item){
