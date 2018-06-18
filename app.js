@@ -49,7 +49,7 @@ function check(list){
 		list.forEach(function(item){
 			item.parentNode.classList.add('no-match');
 		});
-		setTimeout(noMatch, 600, list);
+		setTimeout(noMatch, 700, list);
 	}
 }
 
