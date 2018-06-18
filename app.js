@@ -1,12 +1,14 @@
 
 /******************************************************************************
-*
-* Main Game Logic 
-*
+*																			  *		
+* 									Main Game Logic 						  *	
+*																			  *
 *******************************************************************************/
 
-// Sets event listener to turn over cards
+let score = 0;
+let moves = 0;
 
+// Sets event listener to turn over cards
 document.getElementById("game-area").addEventListener('click', function(event){
 	let card = event.target;
 	if(card.classList.contains("grid-item") === true){
@@ -34,6 +36,12 @@ function check(list){
 		list.forEach(function(item){
 			item.parentNode.classList.add('match');
 		});
+
+		score += 1;
+		if(score === 8){
+			setTimeout(win, 700);
+		}
+		console.log(score);
 		
 	} else{
 		list.forEach(function(item){
@@ -49,5 +57,9 @@ function noMatch(list){
 		item.classList.remove('fas-open');
 		item.parentNode.classList.remove('card-open');
 	});
+}
+
+function win(){
+	alert("WOW YOU WON!!!!")
 }
 
