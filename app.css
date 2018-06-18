@@ -8,48 +8,66 @@ Headers, scoreboard, stars, etc.
 */
 
 h1 {
+	font-family: 'Amatic SC', cursive;
+	text-align: center;
+	font-size: 100px;
+	margin-bottom: 0px;
+	margin-top: 20px;
+
 }
 
 .top{
-	width: 600px;
+	width: 650px;
 	margin-left: auto;
 	margin-right: auto;
 	overflow: auto;
 }
-.score_board{
-
-
+.score-board{
+	display: flex;
+	height: 140px;
 }
 
-.stars{
-	overflow: auto;
-	padding-left: 0px;
-	display: inline-block;
-
-}
 
 #moves{
 	display: inline-block;
-	padding-left: 20px;
 	font-size: 60px;
-	margin-top: 0px;
-	margin-bottom: 0px;
 	font-weight: 500;
 	font-family: 'Amatic SC', cursive;
+	float: right;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 45px;
+	padding-right: 15px;
+	padding-left: 50px;
 
 }
 
-.stars li{
-	list-style: none;
-	display: inline-block;
-	float: left;
 
-}
-
-.fa {
+.star {
 	color: yellow;
 	font-size: 85px;
+	padding-top: 30px;
 }
+
+.redo{
+	color: gray;
+	font-size: 65px;
+}
+
+.restart{
+	font-family: 'Amatic SC', cursive;
+	margin-left: auto;
+	font-size: 40px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 20px;
+}
+
+.restart-text{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
 
 
 

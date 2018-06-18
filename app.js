@@ -35,7 +35,6 @@ function cardOpen(card){
 function check(list){
 	moves += 1;
 	movesDisplay.innerHTML = moves;
-	console.log(moves); 
 	if(list[0].classList[1] === list[1].classList[1]){
 		list.forEach(function(item){
 			item.parentNode.classList.add('match');
@@ -62,7 +61,26 @@ function noMatch(list){
 	});
 }
 
+
+/******************************************************************************
+*																			  *		
+* 									Winning The Game 						  *	
+*																			  *
+*******************************************************************************/
+
+
 function win(){
 	alert("WOW YOU WON!!!!")
 }
+
+
+/******************************************************************************
+*																			  *		
+* 									Restart Button  						  *	
+*																			  *
+*******************************************************************************/
+
+document.getElementById('restart').addEventListener('click', function(){
+	window.location.reload();
+});
 
