@@ -7,7 +7,7 @@
 
 let score = 0;
 let moves = 0;
-const movesDisplay = document.getElementById('moves');
+const movesDisplay = document.getElementById('movesInner');
 
 // Sets event listener to turn over cards
 document.getElementById("game-area").addEventListener('click', function(event){

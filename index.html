@@ -1,21 +1,29 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Matching Game</title>
-    <meta name="description" content="">
+	<meta charset="utf-8">
+	<title>Matching Game</title>
+	<meta name="description" content="">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">    
 	<link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
-    <link rel="stylesheet" href="app.css">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC:400" rel="stylesheet">
+	<link rel="stylesheet" href="app.css">
 </head>
 <body>
 	<div>
-		<header>
-			<h1> Matching Game</h1>
-		</header>
+		<section class="top">
+			<header>
+				<h1> Test Your Memory</h1>
+			</header>
 
-		<section class="score-board">
-			<p> Number of Flips <span id="moves">0</span></p>
+			<div class="score-board">
+				<ul class="stars">
+					<li><i class="fa fa-star"></i></li>
+					<li><i class="fa fa-star"></i></li>
+					<li><i class="fa fa-star"></i></li>
+				</ul>
+				<p id="moves"> Moves : <span id="movesInner">0</span></p>
+			</div>
 		</section>
 
 		<div class="grid-container" id="game-area">

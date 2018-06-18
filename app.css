@@ -2,10 +2,56 @@ html {
     box-sizing: border-box;
 }
 
+
+/*
+Headers, scoreboard, stars, etc. 
+*/
+
 h1 {
-	font-weight: 100;
-	color: blue;
 }
+
+.top{
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: auto;
+}
+.score_board{
+
+
+}
+
+.stars{
+	overflow: auto;
+	padding-left: 0px;
+	display: inline-block;
+
+}
+
+#moves{
+	display: inline-block;
+	padding-left: 20px;
+	font-size: 60px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-weight: 500;
+	font-family: 'Amatic SC', cursive;
+
+}
+
+.stars li{
+	list-style: none;
+	display: inline-block;
+	float: left;
+
+}
+
+.fa {
+	color: yellow;
+	font-size: 85px;
+}
+
+
 
 .grid-container{
 	width: 600px;
@@ -32,9 +78,10 @@ h1 {
 /* This is a cheap way to center the icons*/
 
 .fas{
-	padding: 59px;
 	color:white;
 	visibility: hidden;
+	font-size: 90px;
+	padding: 20px;
 
 }
 
@@ -56,6 +103,16 @@ h1 {
 .match{
 	animation: correct 0.5s;
 }
+
+
+
+
+
+/******************************************************************************
+*																			  *		
+* 									Animations       						  *	
+*																			  *
+*******************************************************************************/
 
 
 @keyframes correct {
