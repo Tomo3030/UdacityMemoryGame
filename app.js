@@ -7,13 +7,19 @@
 
 let score = 0;
 let moves = 0;
+let started = false;
+
+
 const movesDisplay = document.getElementById('movesInner');
 
 // Sets event listener to turn over cards
 document.getElementById("game-area").addEventListener('click', function(event){
 	let card = event.target;
 	if(card.classList.contains("grid-item") === true){
-		cardOpen(card)
+		cardOpen(card);
+		if(started === false){
+			startTimer();
+		}
 	} 
 });
 
@@ -83,4 +89,28 @@ function win(){
 document.getElementById('restart').addEventListener('click', function(){
 	window.location.reload();
 });
+
+/******************************************************************************
+*																			  *		
+* 									Timer 			  						  *	
+*																			  *
+*******************************************************************************/
+
+
+
+function startTimer(){
+	started = true;
+let timer = 0;
+let minutes = 0; 
+setInterval(function(){
+	timer += 1;
+	if(timer > 59){
+		timer = 0;
+		minutes += 1;
+	}
+	document.getElementById('timer').innerHTML = minutes + ":" + ("0"+timer).slice(-2);
+},1000);
+}
+
+
 
