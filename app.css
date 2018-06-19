@@ -3,9 +3,11 @@ html {
 }
 
 
-/*
-Headers, scoreboard, stars, etc. 
-*/
+/******************************************************************************
+*																			  *		
+* 							above the game board       						  *	
+*																			  *
+*******************************************************************************/
 
 h1 {
 	font-family: 'Amatic SC', cursive;
@@ -13,6 +15,10 @@ h1 {
 	font-size: 100px;
 	margin-bottom: 0px;
 	margin-top: 20px;
+}
+
+.board-font{
+	font-family: 'Amatic SC', cursive;
 
 }
 
@@ -32,7 +38,6 @@ h1 {
 	display: inline-block;
 	font-size: 60px;
 	font-weight: 500;
-	font-family: 'Amatic SC', cursive;
 	float: right;
 	margin-top: 0px;
 	margin-bottom: 0px;
@@ -54,7 +59,6 @@ h1 {
 }
 
 .restart{
-	font-family: 'Amatic SC', cursive;
 	margin-left: auto;
 	font-size: 40px;
 	margin-top: 0px;
@@ -67,7 +71,17 @@ h1 {
 	margin-bottom: 0px;
 }
 
+.timer{
+	font-size: 60px;
+}
 
+
+
+/******************************************************************************
+*																			  *		
+* 									Board           						  *	
+*																			  *
+*******************************************************************************/
 
 
 .grid-container{
