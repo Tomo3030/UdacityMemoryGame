@@ -30,32 +30,35 @@ h1 {
 }
 .score-board{
 	display: flex;
-	height: 140px;
+	height: 130px;
 }
 
 
 #moves{
 	display: inline-block;
-	font-size: 60px;
+	font-size: 45px;
 	font-weight: 500;
 	float: right;
 	margin-top: 0px;
 	margin-bottom: 0px;
 	padding-top: 45px;
 	padding-right: 15px;
-	padding-left: 50px;
+	padding-left: 25px;
 }
 
 
 .star {
 	color: yellow;
-	font-size: 85px;
-	padding-top: 30px;
+	font-size: 55px;
+	padding-top: 40px;
+	padding-left: 7px;
+	padding-right: 7px;
 }
 
 .redo{
 	color: gray;
-	font-size: 65px;
+	font-size: 45px;
+	padding-left: 8px;
 }
 
 .restart{
@@ -72,9 +75,13 @@ h1 {
 }
 
 .timer{
-	font-size: 60px;
+	font-size: 45px;
+	width: 152px;
 }
 
+.moves-outer{
+	width:130px;
+}
 
 
 /******************************************************************************
