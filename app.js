@@ -82,13 +82,18 @@ function increaseMovesScore(){
 
 /******************************************************************************
 *																			  *		
-* 									Winning The Game 						  *	
+* 									Winning/Losing The Game 						  *	
 *																			  *
 *******************************************************************************/
 
 
 function win(){
-	alert("WOW YOU WON!!!!")
+	alert("WOW YOU WON!!!!");
+}
+
+function lose(){
+	alert("Sorry, You lost!");
+	window.location.reload();
 }
 
 
@@ -119,6 +124,9 @@ setInterval(function(){
 	if(timer > 59){
 		timer = 0;
 		minutes += 1;
+		if(minutes > 10){
+			lose();
+		}
 	}
 	document.getElementById('timer').innerHTML = minutes + ":" + ("0"+timer).slice(-2);
 },1000);

@@ -10,49 +10,59 @@
 	<link rel="stylesheet" href="app.css">
 </head>
 <body>
-	<div>
+	<content class="end-screen">
 		<section class="top">
 			<header>
 				<h1 class="board-font"> Test Your Memory</h1>
 			</header>
-
 			<div class="score-board">
 				<div class="timer board-font"><p>Timer : <span id="timer">0:00</span></p></div>
 				<div><p class="board-font moves-outer" id="moves">Moves : <span id="movesInner">0</span></p></div>
-				<div><i class="star fa fa-star"></i></div>
-				<div><i class="star fa fa-star"></i></div>
-				<div><i class="star fa fa-star"></i></div>
+				<div><i class="star star-position fa fa-star"></i></div>
+				<div><i class="star star-position fa fa-star"></i></div>
+				<div><i class="star star-position fa fa-star"></i></div>
 				<div id="restart" class="restart board-font">
-				<div><i class="redo fa fa-retweet"></i></div>
-				<p class="restart-text">Restart</p>
+					<div><i class="redo fa fa-retweet"></i></div>
+					<p class="restart-text">Restart</p>
 				</div>
+			</section>
 
 
-		</section>
-	
-
-		<div class="grid-container" id="game-area">
-			<div class="grid-item"> <i class="fas fa-bolt"> </i></div>
-			<div class="grid-item"> <i class="fas fa-basketball-ball"></i> </div> 
-			<div class="grid-item"> <i class="fas fa-frog"></i> </div>
-			<div class="grid-item"> <i class="fas fa-kiwi-bird"></i> </div>
-			<div class="grid-item"> <i class="fas fa-ambulance"></i> </div>
-			<div class="grid-item"> <i class="fas fa-bowling-ball"></i> </div>
-			<div class="grid-item"> <i class="fas fa-bell"></i> </div>
-			<div class="grid-item"> <i class="fas fa-birthday-cake"></i> </div>
-			<div class="grid-item"> <i class="fas fa-bolt"></i> </div>
-			<div class="grid-item"> <i class="fas fa-basketball-ball"></i> </div>
-			<div class="grid-item"> <i class="fas fa-frog"></i> </div>
-			<div class="grid-item"> <i class="fas fa-kiwi-bird"></i> </div>
-			<div class="grid-item"> <i class="fas fa-ambulance"></i> </div>
-			<div class="grid-item"> <i class="fas fa-bowling-ball"> </i> </div>
-			<div class="grid-item"> <i class="fas fa-bell"></i> </div>
-			<div class="grid-item"> <i class="fas fa-birthday-cake"></i></div>
+			<div class="grid-container" id="game-area">
+				<div class="grid-item"> <i class="fas fa-bolt"> </i></div>
+				<div class="grid-item"> <i class="fas fa-basketball-ball"></i> </div> 
+				<div class="grid-item"> <i class="fas fa-frog"></i> </div>
+				<div class="grid-item"> <i class="fas fa-kiwi-bird"></i> </div>
+				<div class="grid-item"> <i class="fas fa-ambulance"></i> </div>
+				<div class="grid-item"> <i class="fas fa-bowling-ball"></i> </div>
+				<div class="grid-item"> <i class="fas fa-bell"></i> </div>
+				<div class="grid-item"> <i class="fas fa-birthday-cake"></i> </div>
+				<div class="grid-item"> <i class="fas fa-bolt"></i> </div>
+				<div class="grid-item"> <i class="fas fa-basketball-ball"></i> </div>
+				<div class="grid-item"> <i class="fas fa-frog"></i> </div>
+				<div class="grid-item"> <i class="fas fa-kiwi-bird"></i> </div>
+				<div class="grid-item"> <i class="fas fa-ambulance"></i> </div>
+				<div class="grid-item"> <i class="fas fa-bowling-ball"> </i> </div>
+				<div class="grid-item"> <i class="fas fa-bell"></i> </div>
+				<div class="grid-item"> <i class="fas fa-birthday-cake"></i></div>
+			</div>
 		</div>
+	</content>
+	<div id="end-game-box">
+		<p>
+			<p id="congrats">Congratulations!</p>
+			<p id="end-stars">
+				<span><i class="star fa fa-star"></i></span>
+				<span><i class="star fa fa-star"></i></span>
+				<span><i class="star fa fa-star"></i></span>
+			</p>
+			 You have won the game. You are now a jedi. You have completed the game in 3 minutes and 14 seconds. You have recived three stars. If you want more stars you must complete the game with 10 moves or less.  
+		</p>
+		<div id="end-restart-button">Play Again</div>
 
 	</div>
 
 	<script src="app.js" ></script>
-	
+
 
 </body>
