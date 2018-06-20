@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">    
 	<link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
 	<link href="https://fonts.googleapis.com/css?family=Amatic+SC:400" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
 	<link rel="stylesheet" href="app.css">
 </head>
 <body>
@@ -49,16 +50,24 @@
 		</div>
 	</content>
 	<div id="end-game-box">
-		<p>
-			<p id="congrats">Congratulations!</p>
+
+			<p id="congrats" class="end-font">You did it!</p>
+			<div id="stats-outer">
+				<div class="stats-inner end-font">
+				<p class="stats-disp">Time : <span>1:42</span></p> 
+				</div>
+				<div class="stats-inner end-font">
+				<p class="stats-disp">Moves : <span>16</span></p>
+				</div>
+			</div>
 			<p id="end-stars">
 				<span><i class="star fa fa-star"></i></span>
 				<span><i class="star fa fa-star"></i></span>
 				<span><i class="star fa fa-star"></i></span>
 			</p>
-			 You have won the game. You are now a jedi. You have completed the game in 3 minutes and 14 seconds. You have recived three stars. If you want more stars you must complete the game with 10 moves or less.  
-		</p>
-		<div id="end-restart-button">Play Again</div>
+			 
+	
+		<div id="end-restart-button" class="end-font">Play Again!</div>
 
 	</div>
 

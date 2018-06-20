@@ -177,6 +177,9 @@ h1 {
 
 #congrats{
 	text-align: center;
+	font-size: 50px;
+	margin: 10px 0 15px 0;
+
 }
 
 #end-restart-button{
@@ -190,7 +193,32 @@ h1 {
 
 #end-stars{
 	text-align: center;
+	padding: 20px 0 20px 0;
 }
+
+#stats-outer{
+	display: flex;
+	justify-content: space-around;
+}
+
+.stats-inner{
+	border:5px solid lightblue;
+	display: inline-block;
+	border-radius: 5px;
+}
+
+.stats-disp{
+	padding:6px 20px 6px 25px;
+}
+
+.end-font{
+	font-family: 'Architects Daughter', cursive;
+	font-size: 24px;
+	text-transform: uppercase;
+
+}
+
+
 
 
 /******************************************************************************
