@@ -188,7 +188,8 @@ h1 {
 	padding: 10px;
 	text-transform: uppercase;
 	border-radius: 3px;
-	background-color: lightblue;
+	background-color: #03DAC6;
+	cursor: pointer;
 }
 
 #end-stars{
@@ -202,7 +203,7 @@ h1 {
 }
 
 .stats-inner{
-	border:10px solid lightblue;
+	border:10px solid #03DAC6;
 	display: inline-block;
 	border-radius: 8px;
 }
