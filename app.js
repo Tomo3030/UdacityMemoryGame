@@ -8,6 +8,8 @@
 let score = 0;
 let moves = 0;
 let started = false;
+let timer = 0;
+let minutes = 0; 
 
 
 const movesDisplay = document.getElementById('movesInner');
@@ -88,7 +90,13 @@ function increaseMovesScore(){
 
 
 function win(){
-	alert("WOW YOU WON!!!!");
+	document.getElementById('contents').classList.add('end-screen');
+	document.getElementById('end-game-box').style.display = 'block';
+	document.getElementById('moves-stats').innerHTML = moves;
+	document.getElementById('time-stats').innerHTML = minutes + ":" + ("0"+timer).slice(-2);
+	document.getElementById('end-restart-button').addEventListener('click', function(){
+	window.location.reload();
+});
 }
 
 function lose(){
@@ -117,8 +125,6 @@ document.getElementById('restart').addEventListener('click', function(){
 
 function startTimer(){
 	started = true;
-let timer = 0;
-let minutes = 0; 
 setInterval(function(){
 	timer += 1;
 	if(timer > 59){
@@ -145,17 +151,18 @@ const removeStarLimits = [4,6,8];
 // find the stars in the DOM
 const starArray = document.getElementsByClassName('star');
 
-// starArray[2].style.color = '#F2F3F5';
-
 //because we got stars by class name (above) They come back in an array. 
 // We need to itterate through this array each time the removeStar function 
-// gets called. So we need a iterator so:
+// gets called. So we need an iterator so:
 
 let starIterator = 2;
+let endStarIterator = 5;
 
 function removeStars(){
 	starArray[starIterator].style.color = '#F2F3F5';
 	starIterator -= 1;
+	starArray[endStarIterator].style.color = '#F2F3F5';
+	endStarIterator -=1;
 }
 
 

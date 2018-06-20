@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="app.css">
 </head>
 <body>
-	<content class="end-screen">
+	<content id="contents">
 		<section class="top">
 			<header>
 				<h1 class="board-font"> Test Your Memory</h1>
@@ -50,14 +50,13 @@
 		</div>
 	</content>
 	<div id="end-game-box">
-
 			<p id="congrats" class="end-font">You did it!</p>
 			<div id="stats-outer">
 				<div class="stats-inner end-font">
-				<p class="stats-disp">Time : <span>1:42</span></p> 
+				<p class="stats-disp">Time: <span id="time-stats">1:42</span></p> 
 				</div>
 				<div class="stats-inner end-font">
-				<p class="stats-disp">Moves : <span>16</span></p>
+				<p class="stats-disp">Moves: <span id="moves-stats">0</span></p>
 				</div>
 			</div>
 			<p id="end-stars">
