@@ -94,6 +94,8 @@ function win(){
 	document.getElementById('end-game-box').style.display = 'block';
 	document.getElementById('moves-stats').innerHTML = moves;
 	document.getElementById('time-stats').innerHTML = minutes + ":" + ("0"+timer).slice(-2);
+//below is a little confusing. But rest assured that endStarInerator -2 is the amount of stars you finish with.
+	document.getElementById('end-star-count').innerHTML = endStarIterator - 2;
 	document.getElementById('end-restart-button').addEventListener('click', function(){
 	window.location.reload();
 });
@@ -201,9 +203,8 @@ function changeCardOrder(){
 	}
 
 	console.log(toShuffle);
-
-
 }
+// When page loads shuffle the cards
 
 window.onload = changeCardOrder;
 
