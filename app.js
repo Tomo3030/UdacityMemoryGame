@@ -146,7 +146,7 @@ setInterval(function(){
 
 // Here we have an arrray which dictaes how many moves until a star is removed. 
 
-const removeStarLimits = [4,6,8];
+const removeStarLimits = [16,20,24];
 
 // find the stars in the DOM
 const starArray = document.getElementsByClassName('star');
@@ -165,4 +165,45 @@ function removeStars(){
 	endStarIterator -=1;
 }
 
+/******************************************************************************
+*																			  *		
+* 								Shuffle 			  						  *	
+*																			  *
+*******************************************************************************/
+
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+
+    while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+};
+
+const cardDisplay = ["fa-ambulance", "fa-ambulance", "fa-paper-plane", "fa-paper-plane", "fa-anchor", "fa-anchor",
+           "fa-bolt", "fa-bolt", "fa-beer", "fa-beer", "fa-leaf", "fa-leaf",
+           "fa-bicycle", "fa-bicycle", "fa-bomb", "fa-bomb"];
+
+
+
+function changeCardOrder(){
+	const toShuffle = document.querySelectorAll('i.fas');
+	const shuffled = shuffle(cardDisplay);
+
+
+	for (var i = 0; i < toShuffle.length; i++) {
+		toShuffle[i].classList.add(shuffled[i])
+	}
+
+	console.log(toShuffle);
+
+
+}
+
+window.onload = changeCardOrder;
 
