@@ -84,7 +84,7 @@ function increaseMovesScore(){
 
 /******************************************************************************
 *																			  *		
-* 									Winning/Losing The Game 						  *	
+* 							Winning/Losing The Game 						  *	
 *																			  *
 *******************************************************************************/
 
@@ -95,8 +95,8 @@ function win(){
 	document.getElementById('moves-stats').innerHTML = moves;
 	document.getElementById('time-stats').innerHTML = minutes + ":" + ("0"+timer).slice(-2);
 //below is a little confusing. But rest assured that endStarInerator -2 is the amount of stars you finish with.
-	document.getElementById('end-star-count').innerHTML = endStarIterator - 2;
-	document.getElementById('end-restart-button').addEventListener('click', function(){
+document.getElementById('end-star-count').innerHTML = endStarIterator - 2;
+document.getElementById('end-restart-button').addEventListener('click', function(){
 	window.location.reload();
 });
 }
@@ -127,17 +127,17 @@ document.getElementById('restart').addEventListener('click', function(){
 
 function startTimer(){
 	started = true;
-setInterval(function(){
-	timer += 1;
-	if(timer > 59){
-		timer = 0;
-		minutes += 1;
-		if(minutes > 10){
-			lose();
+	setInterval(function(){
+		timer += 1;
+		if(timer > 59){
+			timer = 0;
+			minutes += 1;
+			if(minutes > 10){
+				lose();
+			}
 		}
-	}
-	document.getElementById('timer').innerHTML = minutes + ":" + ("0"+timer).slice(-2);
-},1000);
+		document.getElementById('timer').innerHTML = minutes + ":" + ("0"+timer).slice(-2);
+	},1000);
 }
 
 /******************************************************************************
@@ -158,6 +158,10 @@ const starArray = document.getElementsByClassName('star');
 // gets called. So we need an iterator so:
 
 let starIterator = 2;
+
+// also we need to iterate throught the same list for the stars that show on the end screen. 
+// this is pretty hacky, sorry. 
+
 let endStarIterator = 5;
 
 function removeStars(){
@@ -174,22 +178,22 @@ function removeStars(){
 *******************************************************************************/
 
 function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
+	var currentIndex = array.length, temporaryValue, randomIndex;
 
-    while (currentIndex !== 0) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
-    }
+	while (currentIndex !== 0) {
+		randomIndex = Math.floor(Math.random() * currentIndex);
+		currentIndex -= 1;
+		temporaryValue = array[currentIndex];
+		array[currentIndex] = array[randomIndex];
+		array[randomIndex] = temporaryValue;
+	}
 
-    return array;
+	return array;
 };
 
 const cardDisplay = ["fa-ambulance", "fa-ambulance", "fa-paper-plane", "fa-paper-plane", "fa-anchor", "fa-anchor",
-           "fa-bolt", "fa-bolt", "fa-beer", "fa-beer", "fa-leaf", "fa-leaf",
-           "fa-bicycle", "fa-bicycle", "fa-bomb", "fa-bomb"];
+"fa-bolt", "fa-bolt", "fa-beer", "fa-beer", "fa-leaf", "fa-leaf",
+"fa-bicycle", "fa-bicycle", "fa-bomb", "fa-bomb"];
 
 
 
