@@ -1,8 +1,10 @@
 # Udacity Memory Game Project
 ### Notes 
 - Made as part of Udacity's Front End Developers Nanodegree
-- This is my first interactive project
-- The code could be better
+- Made using HTML, CSS and Javascript
+- Can be played by cloning the project and opening the index.html
+- Optimized for use in desktop Chrome
+
 
 ### How to Play 
 - turn over a card 
